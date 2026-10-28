@@ -1,454 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<script data-cfasync="false" src="https://aarems.org/1/feea47fb51957b3ef68965c31d5b4a77"></script>
 <head>
-     <meta name="google-adsense-account" content="ca-pub-9205956077872289">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toon Box Movies</title>
+<meta name="google-adsense-account" content="ca-pub-9205956077872289">
+<meta name="description" content="Toon Box Movies - cartoons, animation and entertainment.">
+<meta name="theme-color" content="#09090d">
+<title>Toon Box Movies | Entertainment Hub</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8607618017422312"
+crossorigin="anonymous"></script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg:#09090d;
+  --panel:#15151d;
+  --text:#fff;
+  --muted:#b0b0bd;
+  --red:#ff3038;
 }
-
-body {
-  background: #090914;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background: #111020;
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #292344;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #b46bff;
-}
-
-.logo span {
-  color: white;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 7px;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #c084fc;
-}
-
-.search {
-  width: 100%;
-  max-width: 260px;
-  padding: 11px;
-  border: 1px solid #554078;
-  border-radius: 20px;
-  background: #1b1930;
-  color: white;
-  outline: none;
-}
-
-.hero {
-  margin: 22px auto;
-  width: 92%;
-  min-height: 280px;
-  border-radius: 20px;
-  padding: 35px 25px;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 80% 20%, #7c3aed 0, transparent 35%),
-    linear-gradient(120deg, #211044, #111020 70%);
-  border: 1px solid #3c285e;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 520px;
-}
-
-.tag {
-  display: inline-block;
-  background: #7c3aed;
-  padding: 7px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 6vw, 52px);
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #d1c8e7;
-  line-height: 1.6;
-  margin-bottom: 22px;
-}
-
-.btn {
-  display: inline-block;
-  background: #a855f7;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 9px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #9333ea;
-}
-
-main {
-  padding: 10px 5% 35px;
-}
-
-.section-title {
-  font-size: 23px;
-  margin: 25px 0 17px;
-}
-
-.section-title span {
-  color: #c084fc;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  gap: 17px;
-}
-
-.card {
-  background: #151426;
-  border: 1px solid #292344;
-  border-radius: 13px;
-  overflow: hidden;
-  transition: transform .25s, border-color .25s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #a855f7;
-}
-
-.poster {
-  height: 155px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 57px;
-  background: linear-gradient(145deg, #38205d, #171326);
-}
-
-.poster.pink {
-  background: linear-gradient(145deg, #772b62, #25102c);
-}
-
-.poster.blue {
-  background: linear-gradient(145deg, #174c70, #151426);
-}
-
-.poster.orange {
-  background: linear-gradient(145deg, #80421f, #251426);
-}
-
-.card-info {
-  padding: 12px;
-}
-
-.card h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: #b8b3ca;
-  font-size: 12px;
-  margin-bottom: 12px;
-}
-
-.watch {
-  display: block;
-  text-align: center;
-  padding: 9px;
-  border-radius: 7px;
-  background: #302047;
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.watch:hover {
-  background: #7c3aed;
-}
-
-.notice {
-  background: #151426;
-  border: 1px dashed #5b4782;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 35px;
-  text-align: center;
-  color: #d5cde5;
-  line-height: 1.7;
-}
-
-footer {
-  background: #111020;
-  text-align: center;
-  padding: 25px 15px;
-  color: #aaa3bf;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-footer strong {
-  color: #c084fc;
-}
-
-@media (max-width: 600px) {
-  header {
-    justify-content: center;
-    text-align: center;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  .search {
-    max-width: 100%;
-  }
-
-  .hero {
-    padding: 28px 20px;
-    min-height: 260px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .poster {
-    height: 125px;
-    font-size: 45px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:92%;max-width:1150px;margin:auto}
+header{background:#101016;border-bottom:1px solid #292932;position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;flex-wrap:wrap}
+.brand{font-size:27px;font-weight:900}
+.brand span,h1 span,h2 span{color:var(--red)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a:hover{color:var(--red)}
+.cta,.btn{background:var(--red);padding:11px 17px;border-radius:9px;font-weight:bold;display:inline-block}
+.hero{padding:45px 0}
+.hero-box{padding:55px 35px;border-radius:22px;background:linear-gradient(120deg,#171017,#50101a,#100e15);border:1px solid #61232c;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:20px}
+.eyebrow{color:#ff898e;text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:bold}
+h1{font-size:clamp(38px,6vw,70px);line-height:1.1;margin:15px 0}
+.hero p{max-width:550px;color:#ddd;margin-bottom:22px}
+.reel{font-size:100px;text-align:center;filter:drop-shadow(0 10px 20px #ff303855)}
+section{padding:25px 0 35px}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:20px;flex-wrap:wrap}
+h2{font-size:29px}
+.section-head p{color:var(--muted)}
+.search{padding:13px;border:1px solid #393943;background:var(--panel);color:white;border-radius:10px;width:300px;max-width:100%}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid #292932;border-radius:15px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--red)}
+.thumb{height:160px;display:grid;place-items:center;font-size:65px;background:linear-gradient(135deg,#51151e,#1c1c28)}
+.t2{background:linear-gradient(135deg,#143951,#1b1b25)}
+.t3{background:linear-gradient(135deg,#4b1c2a,#17151d)}
+.t4{background:linear-gradient(135deg,#454018,#17151d)}
+.t5{background:linear-gradient(135deg,#3b174c,#17151d)}
+.t6{background:linear-gradient(135deg,#123e3b,#17151d)}
+.t7{background:linear-gradient(135deg,#49250f,#17151d)}
+.t8{background:linear-gradient(135deg,#182b55,#17151d)}
+.card-body{padding:15px}
+.tag{color:#ff777d;font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
+.card h3{font-size:17px;margin:5px 0}
+.card p,.info p{color:var(--muted);font-size:14px}
+.ad-slot{margin:28px 0;min-height:90px;border:1px dashed #454550;border-radius:12px;display:grid;place-items:center;text-align:center;color:#999;padding:15px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.info{padding:22px;background:var(--panel);border:1px solid #292932;border-radius:14px}
+.info strong{display:block;margin-bottom:7px}
+footer{margin-top:30px;background:#101016;border-top:1px solid #292932;padding:25px 0;color:var(--muted);font-size:14px}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.empty{display:none;color:var(--muted);padding:20px 0}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-box{grid-template-columns:1fr .5fr}.info-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.hero-box{grid-template-columns:1fr;padding:30px 22px}.reel{font-size:65px}.nav{gap:12px}.nav nav{width:100%;gap:15px}.grid{gap:11px}.thumb{height:125px;font-size:45px}.card-body{padding:11px}h2{font-size:24px}.search{width:100%}}
 </style>
 </head>
 
 <body>
-
 <header>
-  <div class="logo">TOON <span>BOX</span> 🎬</div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#cartoons">Cartoons</a>
-    <a href="#movies">Movies</a>
-    <a href="#popular">Popular</a>
-  </nav>
-
-  <input
-    class="search"
-    id="search"
-    type="search"
-    placeholder="Search cartoons or movies..."
-    aria-label="Search videos"
-  >
+  <div class="wrap nav">
+    <a class="brand" href="#home">TOON <span>BOX</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#cartoons">Cartoons</a>
+      <a href="#movies">Movie Clips</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="cta" href="#explore">Explore Now ↗</a>
+  </div>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <span class="tag">WELCOME TO TOON BOX</span>
-    <h1>Enter The World Of Entertainment!</h1>
-    <p>
-      Discover animated adventures, cartoon stories
-      and your favourite entertainment videos in one place.
-    </p>
-    <a class="btn" href="#cartoons">Explore Now ▶</a>
-  </div>
-</section>
-
-<main>
-
-  <h2 class="section-title" id="cartoons">
-    🎨 Cartoon <span>World</span>
-  </h2>
-
-  <div class="grid">
-
-    <article class="card" data-title="funny cartoons">
-      <div class="poster">😂</div>
-      <div class="card-info">
-        <h3>Funny Cartoons</h3>
-        <p>Comedy • Animation</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
+<main id="home">
+  <section class="hero wrap">
+    <div class="hero-box">
+      <div>
+        <div class="eyebrow">Your Entertainment Destination</div>
+        <h1>Big Fun.<br><span>Bold Stories.</span></h1>
+        <p>Explore cartoon adventures, animation, entertainment highlights and featured videos — all in one place.</p>
+        <a class="btn" href="#explore">▶ Explore Videos</a>
       </div>
-    </article>
+      <div class="reel">🎬</div>
+    </div>
+  </section>
 
-    <article class="card" data-title="animated stories">
-      <div class="poster pink">🧚</div>
-      <div class="card-info">
-        <h3>Animated Stories</h3>
-        <p>Stories • Animation</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
+  <section class="wrap" id="explore">
+    <div class="section-head">
+      <div><h2>Featured <span>Entertainment</span></h2><p>Find something fun to watch.</p></div>
+      <input class="search" id="search" type="search" placeholder="Search cartoons or videos...">
+    </div>
 
-    <article class="card" data-title="adventure cartoons">
-      <div class="poster blue">🚀</div>
-      <div class="card-info">
-        <h3>Adventure Cartoons</h3>
-        <p>Adventure • Fun</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
+    <div class="grid" id="videoGrid">
+      <article class="card" data-title="funny cartoon comedy animation">
+        <div class="thumb">😂</div><div class="card-body"><span class="tag">Cartoons</span><h3>Funny Cartoon Moments</h3><p>Comedy · Animation</p></div>
+      </article>
+      <article class="card" data-title="animated fantasy stories">
+        <div class="thumb t2">🧚</div><div class="card-body"><span class="tag">Animation</span><h3>Animated Story World</h3><p>Fantasy · Stories</p></div>
+      </article>
+      <article class="card" data-title="adventure cartoon space">
+        <div class="thumb t3">🚀</div><div class="card-body"><span class="tag">Adventure</span><h3>Cartoon Adventures</h3><p>Adventure · Family</p></div>
+      </article>
+      <article class="card" data-title="kids family lion animation">
+        <div class="thumb t4">🦁</div><div class="card-body"><span class="tag">Family</span><h3>Kids Animation</h3><p>Family · Animation</p></div>
+      </article>
+      <article class="card" data-title="movie news entertainment highlights">
+        <div class="thumb t5">🍿</div><div class="card-body"><span class="tag">Movies</span><h3>Movie & Entertainment News</h3><p>News · Updates</p></div>
+      </article>
+      <article class="card" data-title="romance love story">
+        <div class="thumb t6">❤️</div><div class="card-body"><span class="tag">Stories</span><h3>Love Story Highlights</h3><p>Romance · Stories</p></div>
+      </article>
+      <article class="card" data-title="action movie clips">
+        <div class="thumb t7">⚡</div><div class="card-body"><span class="tag">Action</span><h3>Action Highlights</h3><p>Action · Highlights</p></div>
+      </article>
+      <article class="card" data-title="trending popular videos">
+        <div class="thumb t8">🔥</div><div class="card-body"><span class="tag">Trending</span><h3>Popular Videos</h3><p>Trending · Featured</p></div>
+      </article>
+    </div>
 
-    <article class="card" data-title="kids animation">
-      <div class="poster orange">🦁</div>
-      <div class="card-info">
-        <h3>Kids Animation</h3>
-        <p>Family • Animation</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
+    <p class="empty" id="empty">No matching videos found. Try another search.</p>
+    <div class="ad-slot">Advertisement space — add your approved AdSense ad-unit code here when available.</div>
+  </section>
 
-  </div>
+  <section class="wrap" id="cartoons">
+    <div class="section-head"><div><h2>Cartoon <span>World</span></h2><p>Animation, comedy and family-friendly stories.</p></div></div>
+    <div class="info-grid">
+      <div class="info"><strong>🎨 Animation & Art</strong><p>Discover original animation, creative characters and stories.</p></div>
+      <div class="info"><strong>😄 Comedy & Fun</strong><p>Find funny moments and light entertainment for your free time.</p></div>
+      <div class="info"><strong>🌟 New Discoveries</strong><p>Explore original content added to the site.</p></div>
+    </div>
+  </section>
 
-  <h2 class="section-title" id="movies">
-    🎬 Movies & <span>Clips</span>
-  </h2>
+  <section class="wrap" id="movies">
+    <div class="section-head"><div><h2>Movies & <span>Clips</span></h2><p>Entertainment updates and videos from authorized sources.</p></div></div>
+    <div class="info-grid">
+      <div class="info"><strong>🎬 Movie Updates</strong><p>Share original movie news, reviews and release updates.</p></div>
+      <div class="info"><strong>▶ Official Videos</strong><p>Link to official trailers and videos you have permission to share.</p></div>
+      <div class="info"><strong>💬 Reviews & Stories</strong><p>Add your own commentary and useful information for viewers.</p></div>
+    </div>
+  </section>
 
-  <div class="grid">
-
-    <article class="card" data-title="action clips">
-      <div class="poster blue">⚡</div>
-      <div class="card-info">
-        <h3>Action Clips</h3>
-        <p>Action • Highlights</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
-
-    <article class="card" data-title="love stories">
-      <div class="poster pink">❤️</div>
-      <div class="card-info">
-        <h3>Love Stories</h3>
-        <p>Romance • Stories</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
-
-    <article class="card" data-title="comedy videos">
-      <div class="poster orange">🤣</div>
-      <div class="card-info">
-        <h3>Comedy Videos</h3>
-        <p>Comedy • Entertainment</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
-
-    <article class="card" data-title="popular videos">
-      <div class="poster">🌟</div>
-      <div class="card-info">
-        <h3>Popular Videos</h3>
-        <p>Trending • Featured</p>
-        <a class="watch" href="#video-links">Watch Now ▶</a>
-      </div>
-    </article>
-
-  </div>
-
-  <section class="notice" id="video-links">
-  <h2>🍿 Watch Our Featured Video!</h2>
-
-  <div style="max-width:700px;margin:20px auto;">
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/yvwrX1at-fM"
-      title="Featured YouTube Video"
-      style="border:0;border-radius:12px;"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
-  </div>
-
-  <a href="https://youtu.be/yvwrX1at-fM"
-     target="_blank"
-     rel="noopener"
-     style="color:#c084fc;">
-    ▶ Watch on YouTube
-  </a>
-</section>
-
-  <h2 class="section-title" id="popular">
-    ⭐ Why <span>Toon Box?</span>
-  </h2>
-
-  <div class="notice">
-    🎨 Cartoon Collection &nbsp; • &nbsp;
-    🎬 Movie Categories<br>
-    📱 Mobile-Friendly Design &nbsp; • &nbsp;
-    🔍 Instant Search
-  </div>
-
+  <section class="wrap" id="about">
+    <div class="section-head"><div><h2>Welcome to <span>Toon Box Movies</span></h2></div></div>
+    <div class="info"><p>Toon Box Movies is an entertainment hub for cartoons, animation, movie updates and featured videos. Add original articles, useful descriptions, contact information and properly licensed media before applying for advertising approval.</p></div>
+  </section>
 </main>
 
 <footer>
-  <strong>TOON BOX MOVIES</strong><br>
-  Your World of Cartoons & Entertainment 🎬<br>
-  © 2026 Toon Box Movies
+  <div class="wrap footer-row">
+    <div><strong style="color:white">TOON BOX MOVIES</strong><br>© 2026 Toon Box Movies. All rights reserved.</div>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
 </footer>
 
 <script>
-const search = document.getElementById("search");
-const cards = document.querySelectorAll(".card");
+const search = document.getElementById('search');
+const cards = [...document.querySelectorAll('.card')];
+const empty = document.getElementById('empty');
 
-search.addEventListener("input", function () {
-  const query = this.value.toLowerCase().trim();
-
-  cards.forEach(function (card) {
-    const title = (
-      card.dataset.title + " " + card.innerText
-    ).toLowerCase();
-
-    card.style.display = title.includes(query) ? "" : "none";
+search.addEventListener('input', () => {
+  const q = search.value.toLowerCase().trim();
+  let visible = 0;
+  cards.forEach(card => {
+    const matches = (card.dataset.title + ' ' + card.innerText).toLowerCase().includes(q);
+    card.style.display = matches ? '' : 'none';
+    if (matches) visible++;
   });
+  empty.style.display = visible ? 'none' : 'block';
 });
 </script>
-<script>
-  atOptions = {
-    'key' : '64d75117dea72da975b8e58811ee40cc',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://bancadeltempoidea.org/22/64d75117dea72da975b8e58811ee40cc"></script>
 </body>
 </html>
